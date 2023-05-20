@@ -102,20 +102,7 @@ const App = () => {
       });
     });
   };
-  /* const PriorityStateHandler = (taskId, p) => {
-    setTodoArr((prevTodoArr) => {
-      return prevTodoArr.map((task) => {
-        if (task.id === taskId) {
-          return {
-            ...task,
-            priority: parseInt(p),
-          };
-        }
-        return task;
-      });
-    });
-  };
-*/
+
   const addTaskHandler = (newTask) => {
     const newTaskId = Math.max(...todoArr.map((task) => task.id)) + 1;
     const taskToAdd = todoArr.find(
@@ -131,7 +118,7 @@ const App = () => {
       state: true,
       priority: newTask.priority,
     };
-    //  PriorityStateHandler(newTaskId, newTask.priority);
+
     setTodoArr((prevTodoArr) => [...prevTodoArr, task]);
   };
 

@@ -30,7 +30,7 @@ const TaskForm = ({ addTaskHandler, names, ids, ShowTaskForm }) => {
         selectid: selectedId,
         body: newTask.body,
         details: newTask.details,
-        priority: newTask.priority,
+        priority: parseInt(newTask.priority),
       };
       ShowTaskForm();
       addTaskHandler(taskValues);
